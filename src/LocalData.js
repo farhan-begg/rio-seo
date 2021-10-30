@@ -6,7 +6,9 @@ const LocalData = () => {
     return (
         <Container>
             <h1>{data.name}</h1>
-            </Container>
+           
+           
+        </Container>
     )
 }
 

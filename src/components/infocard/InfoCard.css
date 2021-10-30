@@ -1,0 +1,56 @@
+.card{
+    max-width: 55% ;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-weight: 300;
+}
+
+.card-miles{
+    font-size: 10px;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card-address{
+    font-size: smaller;
+    margin: 0;
+
+}
+
+.data-city-state{
+    font-size: smaller;
+}
+
+.open{
+    font-size: smaller;
+    color: green;
+}
+
+.phone-number{
+    font-size: smaller;
+    color: orange;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    height: 15%;
+    width: 150px;
+    background-color: rgb(58, 58, 58);
+    border: none;
+}
+
+.btn:hover{
+    background-color: grey;
+}

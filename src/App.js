@@ -1,15 +1,15 @@
 
 import DataFetching from './api/DataFetching';
-import Header from './components/Header';
+import Header from './components/header/Header';
 import LocalData from './LocalData';
-import {  Container } from 'react-bootstrap';
+import HoldingContainer from './components/holdingContainer/HoldingContainer'
 function App() {
 
   return (
     <div className="App">
       {/* <DataFetching /> */}
       <Header />
-      <LocalData />
+    <HoldingContainer />
     </div>
   );
 }
