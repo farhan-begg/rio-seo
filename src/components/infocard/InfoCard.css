@@ -1,7 +1,8 @@
-.card{
-    max-width: 55% ;
-    padding: 20px;
-    margin-bottom: 10px;
+.card.card-container{
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    height: 30vh;
 }
 
 p {
@@ -31,6 +32,7 @@ p {
 .open{
     font-size: smaller;
     color: green;
+    margin: 0;
 }
 
 .phone-number{
@@ -41,14 +43,15 @@ p {
 
 .buttons{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .btn {
-    height: 15%;
-    width: 150px;
+   
+
     background-color: rgb(58, 58, 58);
     border: none;
+    
 }
 
 .btn:hover{
