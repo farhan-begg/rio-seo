@@ -10,6 +10,7 @@ const HoldingContainer = ({ data}) => {
     const [loading, setLoading] = useState(false)
     const [active, setActive] = useState(false)
 
+
    
    console.log(loading)
     return (
@@ -18,9 +19,9 @@ const HoldingContainer = ({ data}) => {
 
         <div className="display"> 
         <div className="flex">
-        <DataFetching loading={loading} setLoading={setLoading} active={active} setActive={setActive} data={data} />
+        {/* <DataFetching loading={loading} setLoading={setLoading} active={active} setActive={setActive} data={data} /> */}
 
-        {/* <InfoCard loading={loading} setLoading={setLoading} />  */}
+        <InfoCard loading={loading} setLoading={setLoading} active={active} setActive={setActive} data={data}/> 
         <Maps loading={loading} setLoading={setLoading} active={active} setActive={setActive} data={data} />
         
         </div>

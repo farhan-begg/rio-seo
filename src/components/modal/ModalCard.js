@@ -1,13 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, Button } from 'react-bootstrap';
 
-const ModalCard = ({data, setData}) => {
-console.log("HELLO BITCHES")
-console.log("hiiii", data)
+const ModalCard = ({data}) => {
     return (
-        <div>
-            <h1>hello test</h1>
-        {/* {data.data.map(item => (
+        <Card>
+        {data.map(item => (
                      
             <Card className="card-container">
             <div className="group" key={item.id}>
@@ -23,8 +20,8 @@ console.log("hiiii", data)
 
        
             </Card>
-              ))} */}
-              </div>
+              ))}
+              </Card>
     )
 }
 

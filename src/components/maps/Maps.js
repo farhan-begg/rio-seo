@@ -14,10 +14,10 @@ const Maps = ({ loading, active, data }) => {
         zoom: 10,
         width: '40vw',
         height: '98.4%'
-
     })
 
-    if(!loading && !active){
+    console.log("map", data)
+    if (!loading && !active) {
         return <div>
             <Card className="grey">
                 <div>
@@ -25,34 +25,36 @@ const Maps = ({ loading, active, data }) => {
                 </div>
             </Card>
         </div>
-    } else{
-    return (
-        <div>
+    }
+
+    if (active) {
+        return (
             <div>
-                {active &&
-                    <div > <ModalCard  data={data}/></div>
-                }
-
+                <div>
+                    {active &&
+                        <div > <ModalCard data={data} /></div>
+                    }
+                </div>
             </div>
+        )
+    }
 
-            
-
-            {loading &&
-                <ReactMapGL {...viewport}
-                    mapboxApiAccessToken="pk.eyJ1IjoiZmFyaGFuMjciLCJhIjoiY2t2ZDNjN3UzYjM3dDJwbnpuNGMycWgzaiJ9.KZOuTWfFf6j0lumDx-fsew"
-                    onViewportChange={viewport => {
-                        setViewport(viewport);
-                    }}
-                    mapStyle="mapbox://styles/farhan27/ckvd49kfy080b14m4r9ae0jpk"
-                >
-                </ReactMapGL>
-            }
-
-
-
-        </div>
-    )
-        }
+    if (loading) {
+        return (
+            <div>
+                {loading &&
+                    <ReactMapGL {...viewport}
+                        mapboxApiAccessToken="pk.eyJ1IjoiZmFyaGFuMjciLCJhIjoiY2t2ZDNjN3UzYjM3dDJwbnpuNGMycWgzaiJ9.KZOuTWfFf6j0lumDx-fsew"
+                        onViewportChange={viewport => {
+                            setViewport(viewport);
+                        }}
+                        mapStyle="mapbox://styles/farhan27/ckvd49kfy080b14m4r9ae0jpk"
+                    >
+                    </ReactMapGL>
+                }
+            </div>
+        )
+    }
 }
 
 export default Maps
