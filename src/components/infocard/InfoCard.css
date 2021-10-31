@@ -1,59 +1,71 @@
-.card.card-container{
-    width: 50%;
-    margin: 10px;
+.card{
+    width: 350px;
+    height: 250px;
+
     padding: 10px;
-    height: 30vh;
+    border-radius: 0;
+    box-shadow: .2px .2px grey;
+    margin-bottom:10px ;
+
 }
 
-p {
-    font-weight: 300;
-}
-
-.card-miles{
-    font-size: 10px;
-}
-
-.group{
+.display-title-miles{
     display: flex;
     justify-content: space-between;
 }
 
+.card-miles{
+    font-size: 10px;
+    font-weight: light;
+}
 
-.card-address{
-    font-size: smaller;
-    margin: 0;
+p {
+    font-weight: 250;
 
 }
 
+.card-address {
+    margin: 0;
+    font-size: small;
+}
 .data-city-state{
-    font-size: smaller;
+    font-size: small;
 }
 
 .open{
-    font-size: smaller;
     color: green;
-    margin: 0;
+    font-size: small;
 }
 
 .phone-number{
-    font-size: smaller;
     color: orange;
-
 }
 
-.buttons{
-    display: flex;
-    justify-content: space-around;
-}
-
-.btn {
-   
-
-    background-color: rgb(58, 58, 58);
+.btn{
+    background-color: rgb(80, 79, 79);
     border: none;
-    
+    font-size: .7rem ;
+    width: 160px;
+    font-weight: 250;
+    text-transform: uppercase;
 }
 
 .btn:hover{
     background-color: grey;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+
+    
+    
+}
+
+
+.card-holder{
+    width: auto;
+    height: 600px;
+    overflow-y:auto
 }

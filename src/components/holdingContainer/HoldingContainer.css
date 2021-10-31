@@ -1,18 +1,24 @@
-.card.display {
-   width: 600px;
+.display {
+
    margin-left: auto;
    margin-right: auto;
+    width: 800px;
+
 
 }
 
 
 .flex {
     display: flex;
-    justify-content: space-between;
+
+
+
+
 }
 
 .main-title{
     width: 600px;
     margin-left: auto;
     margin-right: auto;
+    font-size: larger;
 }
