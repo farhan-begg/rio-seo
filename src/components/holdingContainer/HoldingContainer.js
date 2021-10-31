@@ -1,11 +1,15 @@
+import { Modal } from 'bootstrap';
 import React, { useState } from 'react'
 import { Container, Card } from 'react-bootstrap';
 import DataFetching from '../../api/DataFetching';
 import InfoCard from '../infocard/InfoCard';
 import Maps from '../maps/Maps';
+import ModalCard from '../modal/ModalCard';
 import './HoldingContainer.css'
-const HoldingContainer = () => {
+const HoldingContainer = ({ data}) => {
     const [loading, setLoading] = useState(false)
+    const [active, setActive] = useState(false)
+
    
    console.log(loading)
     return (
@@ -14,10 +18,11 @@ const HoldingContainer = () => {
 
         <div className="display"> 
         <div className="flex">
-        <DataFetching loading={loading} setLoading={setLoading}/>
+        <DataFetching loading={loading} setLoading={setLoading} active={active} setActive={setActive} data={data} />
 
         {/* <InfoCard loading={loading} setLoading={setLoading} />  */}
-        <Maps loading={loading} setLoading={setLoading} />
+        <Maps loading={loading} setLoading={setLoading} active={active} setActive={setActive} data={data} />
+        
         </div>
         
         </div>

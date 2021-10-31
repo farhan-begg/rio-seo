@@ -2,23 +2,25 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../components/infocard/InfoCard.css'
 import { Card, Button } from 'react-bootstrap';
+import ModalCard from '../components/modal/ModalCard';
 
 
-const DataFetching = ({loading, setLoading}) => {
+const DataFetching = ({loading, setLoading, active, setActive}) => {
     const url = 'https://my.api.mockaroo.com/locations.json?key=a45f1200'
-    // 'https://my.api.mockaroo.com/locations.json?key=a45f1200'
     const [data, setData] = useState([])
+   
     useEffect(() => {
         axios.get(url)
             .then(res => {
                 console.log(res)
                 setData(res.data)
+
             })
             .catch(err => {
                 console.log(err)
             })
     }, [url])
-
+console.log("hellllllo data",data)
     const handleDirection = e => {
         e.preventDefault();
         if (!loading) {
@@ -29,7 +31,27 @@ const DataFetching = ({loading, setLoading}) => {
         console.log("checking loading state", loading)
     }
 
+    const toggleInfo = (e) => {
+        e.preventDefault();
+        if(!active)
+            setActive(true)
+        else{
+            setActive(false)
+        }
+        console.log("*******", active)
+    }
+
+    // const handleModal = e => {
+    //     e.preventDefault();
+    //     if (!openModal) {
+    //         setOpenModal(true)
+    //     } else {
+    //         setOpenModal(false)
+    //     }
+    //     console.log("checking loading state", loading)
+    // }
     return (
+        <div>
       <Card className="card-holder">
    
               {data.map(item => (
@@ -48,13 +70,14 @@ const DataFetching = ({loading, setLoading}) => {
 
             <div className="buttons">
                 <Button onClick={e => handleDirection(e)}>Directions</Button>
+                <Button onClick={(e) => toggleInfo(e)}>More Info</Button>
 
-                <Button>More Info</Button>
             </div>
             </Card>
               ))}
-         
       </Card>
+      {/* {active === true ?  <div style={{position:"absolute" }}> <ModalCard data={data} setData={setData}  /></div> : ""  }  */}
+      </div>
     )
 
 
