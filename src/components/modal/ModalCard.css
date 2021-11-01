@@ -1,0 +1,38 @@
+.orange{
+    display: flex;
+    justify-content: space-between;
+    color: orange;
+    font-size: small;
+    font-weight: 300;
+}
+img{
+    max-height: 40%;
+    object-fit: cover;
+}
+
+.mp-address{
+    margin: 0;
+    font-size: small;
+}
+.mp-city{
+    font-size: small;
+}
+
+.card.modal-card {
+    height: 400px;
+}
+ul {
+    margin-top: 10px;
+}
+ul li{
+    font-size: 12px;
+    font-weight: 500;
+    list-style-type: none;
+    padding: 0;
+    
+
+}
+.modal-card{
+    margin-left: 30px;
+    margin-top: 30px;
+}

@@ -5,6 +5,7 @@ import ReactMapGL, { Marker } from 'react-map-gl'
 import ModalCard from '../modal/ModalCard'
 import { Card, Button } from 'react-bootstrap';
 import './Map.css'
+import GoogleMap from 'react-google-maps'
 
 const Maps = ({ loading, active, data }) => {
 
@@ -12,7 +13,7 @@ const Maps = ({ loading, active, data }) => {
         latitude: 41.0938,
         longitude: -85.0707,
         zoom: 10,
-        width: '40vw',
+        width: '350px',
         height: '98.4%'
     })
 
@@ -21,7 +22,7 @@ const Maps = ({ loading, active, data }) => {
         return <div>
             <Card className="grey">
                 <div>
-                    <h1>Click Details</h1>
+                    <h1>Click a location card to load map</h1>
                 </div>
             </Card>
         </div>

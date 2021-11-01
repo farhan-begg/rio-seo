@@ -26,6 +26,8 @@ const InfoCard = ({loading, setLoading, active, setActive, data}) => {
         }
         console.log("*******", active)
     }
+
+
     return (
         <div>
       <Card className="card-holder">
@@ -36,6 +38,7 @@ const InfoCard = ({loading, setLoading, active, setActive, data}) => {
                  <p className="card-title">{item.name}</p>
                  <p className="card-miles">0.5 miles</p>
                  </div>
+                
                  <p className="card-address">{item.address}</p>
                  <p className="data-city-state">{item.city},<span> {item.state}</span> <span> {item.postal_code}</span></p>
                  <p className="open">Open today until {item.monday_close}</p>
@@ -43,9 +46,11 @@ const InfoCard = ({loading, setLoading, active, setActive, data}) => {
             </div>
             <div className="buttons">
                 <Button onClick={e => handleDirection(e)}>Directions</Button>
+                {console.log("++++++++",item.id)}
                 <Button onClick={(e) => toggleInfo(e)}>More Info</Button>
             </div>
             </Card>
+            
               ))}
       </Card> 
       </div>

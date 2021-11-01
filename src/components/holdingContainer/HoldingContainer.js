@@ -1,7 +1,6 @@
 import { Modal } from 'bootstrap';
 import React, { useState } from 'react'
 import { Container, Card } from 'react-bootstrap';
-import DataFetching from '../../api/DataFetching';
 import InfoCard from '../infocard/InfoCard';
 import Maps from '../maps/Maps';
 import ModalCard from '../modal/ModalCard';

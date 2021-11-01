@@ -1,5 +1,4 @@
 
-import DataFetching from './api/DataFetching';
 import React, { useEffect, useState } from 'react';
 import Header from './components/header/Header';
 import HoldingContainer from './components/holdingContainer/HoldingContainer'
