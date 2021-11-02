@@ -1,12 +1,12 @@
 import React from 'react'
 import { Navbar, Container } from 'react-bootstrap';
-
+import './Header.css'
 const Header = () => {
     return (
         <Navbar>
         <Container>
           <Navbar.Brand href="#home">
-          <img src="https://www.rioseo.com/wp-content/uploads/2014/10/rio_seo_logo_hr.png"  width={150}/>
+          <img  className="header-logo" src="https://www.rioseo.com/wp-content/uploads/2014/10/rio_seo_logo_hr.png"  />
 
           </Navbar.Brand>
           <Navbar.Toggle  />

@@ -1,7 +1,8 @@
 .card.grey{
     background-color: rgb(156, 156, 156);
-    height: 98.4%;
-    width: 350px
+    height: 600px;
+    width: 350px;
+
 }
 
 div h1{
@@ -15,13 +16,11 @@ div h1{
  
 }
 
-@media screen and (max-width: 700px) {
-    /* div.grey.card{
-        display: none !important;
-
+@media screen and (max-width: 800px) {
+    .card.grey{
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    div.overlays{
-        display: none !important;
-        
-    } */
+
 }

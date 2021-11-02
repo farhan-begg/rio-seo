@@ -6,12 +6,12 @@ import Maps from '../maps/Maps';
 import ModalCard from '../modal/ModalCard';
 import './HoldingContainer.css'
 
-const HoldingContainer = ({ data }) => {
+const HoldingContainer = ({ data, viewPort }) => {
   const [loading, setLoading] = useState(false)
   const [active, setActive] = useState(false)
   const [selectedObj, setSelectedObj] = useState(null);
-  const [displayCard, setDisplayCard] = useState("Info")
-  const [displayMap, setDisplayMap] = useState("Map")
+  const [displayCard, setDisplayCard] = useState(true)
+  const [displayMap, setDisplayMap] = useState(false)
 
   const [isMobile, setMobile] = useState(window.innerWidth > 1450);
 
@@ -35,34 +35,53 @@ const HoldingContainer = ({ data }) => {
 
   });
 
+  const toggleMap = () => {
+    setDisplayMap(true)
+    if (displayMap) {
+      setDisplayCard(false)
+      return setDisplayMap
+    }
+  }
+
   return (
     <div>
 
 
       {isMobile ? (
         <div>
-          <InfoCard style={{width: "600px", marginleft: 'auto', marginRight: 'auto'}}
 
-            loading={loading}
-            setLoading={setLoading}
-            active={active}
-            setActive={setActive}
-            data={data}
-            onSelectCard={handleChangeCard} />
+          {displayCard &&
 
-            
-    
-    
+            <InfoCard style={{ width: "600px", marginleft: 'auto', marginRight: 'auto' }}
+
+              loading={loading}
+              setLoading={setLoading}
+              active={active}
+              setActive={setActive}
+              data={data}
+              onSelectCard={handleChangeCard} />}
+
+          {!displayCard & displayMap && 
+            <Maps
+              className="map"
+              loading={loading}
+              setLoading={setLoading}
+              active={active}
+              setActive={setActive}
+              data={data}
+              selectedCard={selectedObj} />}
 
 
-        <div className="button-holder">
-          <Button className="bottom-tab" onClick={() => {
-            setDisplayCard()
-          }}>Info</Button>
-             <Button className="bottom-tab" onClick={() => {
-            setDisplayMap()
-          }}>Map</Button>
-   </div>
+
+          <div className="button-holder">
+            <Button className="bottom-tab" onClick={() => {
+              setDisplayCard(true)
+              console.log(setDisplayCard)
+            }}>Info</Button>
+            <Button className="bottom-tab" onClick={
+              toggleMap
+            }>Map</Button>
+          </div>
         </div>
 
       ) : (
