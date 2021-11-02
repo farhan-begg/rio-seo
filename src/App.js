@@ -5,9 +5,11 @@ import HoldingContainer from './components/holdingContainer/HoldingContainer'
 import axios from 'axios'
 function App() {
 
+   
   const url = 'https://my.api.mockaroo.com/locations.json?key=a45f1200'
   const [data, setData] = useState([])
  
+  
   useEffect(() => {
       axios.get(url)
           .then(res => {
@@ -20,10 +22,12 @@ function App() {
           })
   }, [url])
 
+
   return (
     <div className="App">
        <Header />
     <HoldingContainer data={data} /> 
+   
     </div>
   );
 }

@@ -7,10 +7,21 @@
 div h1{
     font-size: small;
     position: relative;
-    top: 400px;
+    top: 280px;
     left: 60px;
     font-weight: 400;
 
 
  
+}
+
+@media screen and (max-width: 700px) {
+    /* div.grey.card{
+        display: none !important;
+
+    }
+    div.overlays{
+        display: none !important;
+        
+    } */
 }
