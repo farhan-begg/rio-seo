@@ -1,73 +1,67 @@
-.card{
-    width: 350px;
-    height: 250px;
+.card {
+  width: 350px;
+  height: 250px;
 
-    padding: 10px;
-    border-radius: 0;
-    box-shadow: .2px .2px grey;
-    margin-bottom:10px ;
-
+  padding: 10px;
+  border-radius: 0;
+  box-shadow: 0.2px 0.2px grey;
+  margin-bottom: 10px;
 }
 
-.display-title-miles{
-    display: flex;
-    justify-content: space-between;
+.display-title-miles {
+  display: flex;
+  justify-content: space-between;
 }
 
-.card-miles{
-    font-size: 10px;
-    font-weight: light;
+.card-miles {
+  font-size: 10px;
+  font-weight: light;
 }
 
 p {
-    font-weight: 250;
-
+  font-weight: 250;
 }
 
 .card-address {
-    margin: 0;
-    font-size: small;
+  margin: 0;
+  font-size: small;
 }
-.data-city-state{
-    font-size: small;
-}
-
-.open{
-    color: green;
-    font-size: small;
+.data-city-state {
+  font-size: small;
 }
 
-.phone-number{
-    color: orange;
+.open {
+  color: green;
+  font-size: small;
 }
 
-.btn{
-    background-color: rgb(80, 79, 79);
-    border: none;
-    font-size: .7rem ;
-    width: 160px;
-    font-weight: 250;
-    text-transform: uppercase;
+.phone-number {
+  color: orange;
 }
 
-.btn:hover{
-    background-color: grey;
+.btn {
+  background-color: rgb(80, 79, 79);
+  border: none;
+  font-size: 0.7rem;
+  width: 160px;
+  font-weight: 250;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: grey;
 }
 
 .buttons {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-
-    
-    
+  position: relative;
+  display: flex;
+  justify-content: space-around;
 }
 
-
-.card-holder{
-    margin-left: auto;
-    margin-right: auto;
-    width: 375px;
-    height: 600px;
-    overflow-y:auto
+.card-holder {
+  margin-left: auto;
+  margin-right: auto;
+  width: 375px;
+  height: 600px;
+  overflow-y: auto;
 }

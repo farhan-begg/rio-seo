@@ -1,62 +1,49 @@
-.orange{
-    display: flex;
-    justify-content: space-around;
-    color: orange;
-    font-size: small;
-    font-weight: 300;
-   
+.orange {
+  display: flex;
+  justify-content: space-around;
+  color: orange;
+  font-size: small;
+  font-weight: 300;
 }
-img{
-    max-height: 30%;
-    object-fit: cover;
+img {
+  max-height: 30%;
+  object-fit: cover;
 }
 
-.mp-address{
-    margin: 0;
-    font-size: small;
+.mp-address {
+  margin: 0;
+  font-size: small;
 }
-.mp-city{
-    font-size: small;
+.mp-city {
+  font-size: small;
 }
 
 .card.modal-card {
-    height: 500px;
+  height: 500px;
 }
 ul {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-ul li{
-    font-size: 12px;
-    font-weight: 500;
-    list-style-type: none;
-    padding: 0;
-    
-
+ul li {
+  font-size: 12px;
+  font-weight: 500;
+  list-style-type: none;
+  padding: 0;
 }
-.modal-card{
-    margin-left: 30px;
-    margin-top: 20px;
+.modal-card {
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
-.orange-icon .bi{
-    padding-right: 5px;
+.orange-icon .bi {
+  padding-right: 5px;
 }
-
 
 .logo {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
-.modal-button{
-   margin-left: auto;
-   margin-right: auto;
-}
-
-
-@media screen and (max-width: 700px) {
-    /* div.modal-card{
-        display: none !important;
-
-    } */
-
+.modal-button {
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -3,8 +3,6 @@ import axios from 'axios'
 import './InfoCard.css'
 import { Card, Button } from 'react-bootstrap';
 
-
-
 const InfoCard = ({ loading, onSelectCard, setLoading, active, setActive, data }) => {
 
     const handleDirection = e => {
@@ -14,7 +12,6 @@ const InfoCard = ({ loading, onSelectCard, setLoading, active, setActive, data }
         } else {
             setLoading(false)
         }
-        console.log("checking loading state", loading)
     }
 
     const toggleInfo = id => {
@@ -27,23 +24,18 @@ const InfoCard = ({ loading, onSelectCard, setLoading, active, setActive, data }
             else {
                 setActive(false)
             }
-            console.log("*******", active)
         }
-
     }
-
-
     return (
         <div>
             <Card className="card-holder">
                 {data.map(item => (
-                    <Card className="card-container">
-                        <div className="group" key={item.id}>
+                    <Card className="card-container" key={item.id}>
+                        <div className="group" >
                             <div className="display-title-miles">
                                 <p className="card-title">{item.name}</p>
                                 <p className="card-miles">0.5 miles</p>
                             </div>
-
                             <p className="card-address">{item.address}</p>
                             <p className="data-city-state">{item.city},<span> {item.state}</span> <span> {item.postal_code}</span></p>
                             <p className="open">Open today until {item.monday_close}</p>
@@ -51,17 +43,13 @@ const InfoCard = ({ loading, onSelectCard, setLoading, active, setActive, data }
                         </div>
                         <div className="buttons">
                             <Button onClick={e => handleDirection(e)}>Directions</Button>
-                            {console.log("++++++++", item.id)}
                             <Button onClick={(e) => toggleInfo(item.id)}>More Info</Button>
                         </div>
                     </Card>
-
                 ))}
             </Card>
         </div>
     )
-
-
 }
 
 export default InfoCard

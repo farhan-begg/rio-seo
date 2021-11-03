@@ -19,15 +19,9 @@ const HoldingContainer = ({ data, viewPort }) => {
     setMobile(window.innerWidth < 800);
   };
 
-
-
-  console.log(loading)
-
   const handleChangeCard = obj => {
-    console.log("XXX: ", obj);
     setSelectedObj(obj);
   }
-
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
@@ -46,22 +40,17 @@ const HoldingContainer = ({ data, viewPort }) => {
   return (
     <div>
 
-
       {isMobile ? (
         <div>
-
           {displayCard &&
-
             <InfoCard style={{ width: "600px", marginleft: 'auto', marginRight: 'auto' }}
-
               loading={loading}
               setLoading={setLoading}
               active={active}
               setActive={setActive}
               data={data}
               onSelectCard={handleChangeCard} />}
-
-          {!displayCard & displayMap && 
+          {!displayCard & displayMap &&
             <Maps
               className="map"
               loading={loading}
@@ -69,14 +58,11 @@ const HoldingContainer = ({ data, viewPort }) => {
               active={active}
               setActive={setActive}
               data={data}
-              selectedCard={selectedObj} />}
-
-
-
+              selectedCard={selectedObj}
+            />}
           <div className="button-holder">
             <Button className="bottom-tab" onClick={() => {
               setDisplayCard(true)
-              console.log(setDisplayCard)
             }}>Info</Button>
             <Button className="bottom-tab" onClick={
               toggleMap
@@ -85,18 +71,11 @@ const HoldingContainer = ({ data, viewPort }) => {
         </div>
 
       ) : (
-
-
         <div>
-
           <p className="main-title"> Found 3 Taco Trucks in 92121</p>
-
           <div className="display">
             <div className="flex">
-              {/* <DataFetching loading={loading} setLoading={setLoading} active={active} setActive={setActive} data={data} /> */}
-
               <InfoCard
-
                 loading={loading}
                 setLoading={setLoading}
                 active={active}
@@ -111,13 +90,9 @@ const HoldingContainer = ({ data, viewPort }) => {
                 setActive={setActive}
                 data={data}
                 selectedCard={selectedObj} />
-
             </div>
-
           </div>
-
           <div>
-
           </div>
         </div>
       )}

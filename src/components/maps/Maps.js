@@ -1,12 +1,9 @@
-import { render } from '@testing-library/react'
 import React, { useState } from 'react'
 import ReactMapGL, { Marker } from 'react-map-gl'
 
 import ModalCard from '../modal/ModalCard'
 import { Card, Button } from 'react-bootstrap';
 import './Map.css'
-import GoogleMap from 'react-google-maps'
-
 const Maps = ({ loading, active, data, selectedCard, setActive }) => {
 
     const [viewport, setViewport] = useState({
